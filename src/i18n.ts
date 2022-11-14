@@ -31,6 +31,10 @@ i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false,
   },
+  react: {
+    transSupportBasicHtmlNodes: true,
+    transKeepBasicHtmlNodesFor: ["br", "strong", "i"],
+  },
 });
 
 export default i18n;

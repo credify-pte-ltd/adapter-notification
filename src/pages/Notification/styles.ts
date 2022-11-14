@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
 export const Title = styled.div`
   font-size: 24px;
   margin-bottom: 16px;
+  text-transform: uppercase;
 `;
 
 export const Content = styled.div`

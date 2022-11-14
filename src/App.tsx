@@ -2,7 +2,7 @@ import { AppContextProvider } from "context/AppContext";
 import "i18n";
 import NotificationPage from "pages/Notification";
 import { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const [commonData, setCommonData] = useState({});
@@ -10,9 +10,11 @@ function App() {
   return (
     <AppContextProvider value={{ commonData, setCommonData }}>
       <Router basename="notification">
-        <Route path={"/"}>
-          <NotificationPage />
-        </Route>
+        <Switch>
+          <Route path={"/"}>
+            <NotificationPage />
+          </Route>
+        </Switch>
       </Router>
     </AppContextProvider>
   );

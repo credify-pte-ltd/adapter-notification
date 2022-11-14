@@ -11,3 +11,9 @@
 $ yarn
 $ yarn start
 ```
+
+## Build
+
+```shell script
+$ yarn build
+```
