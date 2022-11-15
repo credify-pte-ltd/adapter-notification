@@ -3,6 +3,7 @@ import React, { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import { Content, Title, Wrapper } from "./styles";
+import MainLayout from "layout/MainLayout";
 
 function useQuery() {
   const { search } = useLocation();
@@ -22,10 +23,12 @@ function Page() {
   }, [code, t]);
 
   return (
-    <Wrapper>
-      <Title>{t("title")}</Title>
-      <Content>{getNotificationContent}</Content>
-    </Wrapper>
+    <MainLayout>
+      <Wrapper className="page-wrapper">
+        <Title>{t("title")}</Title>
+        <Content>{getNotificationContent}</Content>
+      </Wrapper>
+    </MainLayout>
   );
 }
 
